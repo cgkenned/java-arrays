@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ArraysHomework {
 //	1. Write a program to sum all the values of a given Array in Java.
 
@@ -12,26 +10,31 @@ public class ArraysHomework {
 		}
 		System.out.println(sum);
 
-	}
 	
-//	2. What is the output?
-
-	double[ ] exampleArray = {1,5,6,5,4,1};
-    double maximum = exampleArray[0];
-    int index = 0;
-
-    for (int i = 1; i<exampleArray.length>; i++){
-
-         if (exampleArray[ i ] > maximum) {
-
-              maximum = exampleArray[ i ];
-              index = i;
-
-         }
-
-    }
-    System.out.println(index);
-    
+	
+	//	2. What is the output?
+	
+		double[ ] exampleArray = {1,5,6,5,4,1};
+	    double maximum = exampleArray[0];
+	    int index = 0;
+	
+	    for (int i = 1; i < exampleArray.length; i++){
+	
+	         if (exampleArray[ i ] > maximum) {
+	
+	              maximum = exampleArray[ i ];
+	              index = i;
+	
+	         }
+	
+	    }
+	    System.out.println(index);
+	    
+	    for (int value: toPower(4,2)) {
+	    	System.out.println(value);
+	    }
+	} 
+	
 //	3. Write a public static method called "toPower" that takes in as parameters
 //	two integers called size and power. The method should return an array of size
 //	"size" with each array index raised to the value of "power." So, for example,
@@ -40,12 +43,9 @@ public class ArraysHomework {
 
     public static int[] toPower(Integer size, Integer power) {
     	int[] toPowerArray = new int[size];
-    	for (int index: toPowerArray) {
-    		Math.pow(index, power);
-    		toPowerArray[index] = (int)index;
+    	for (int index = 0; index < size; ++index) {
+    		toPowerArray[index] = (int)Math.pow(index, power);
     	}
     	return toPowerArray;
     }
-    System.out.println(this.toPower(4, 2));
-     
 }
